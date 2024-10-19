@@ -1,33 +1,45 @@
 import Image from "next/image";
+import { Cinzel, Montserrat } from "next/font/google"
 
+const FontCinzel = Cinzel({
+  weight: ['400'],
+  subsets: ['latin'],
+})
+
+const FontMontserrat = Montserrat({
+  weight: ['400'],
+  subsets: ['latin'],
+})
 export default function Home() {
   return (
-    <div className="m-0 p-0 box-border">
-      <nav className="h-20 w-full bg-slate-900 flex justify-around flex-row p-4 items-center">
-        <h1 className="font-bold text-2xl italic">Cruelty</h1>
-        <ul className="flex justify-between gap-12">
-          <li className="font-semibold hover:text-green-500 hover:scale-150 transition duration-200 cursor-pointer">Inicio</li>
-          <li className="font-semibold hover:text-green-500 hover:scale-150 transition duration-200 cursor-pointer">Drops</li>
-          <li className="font-semibold hover:text-green-500 hover:scale-150 transition duration-200 cursor-pointer">Sobre</li>
-          <li className="font-semibold hover:text-green-500 hover:scale-150 transition duration-200 cursor-pointer">Contato</li>
-        </ul>
+    <>
+      <nav className="h-20 w-full bg-black flex justify-around flex-row p-4 items-center fixed">
+        <div className="flex flex-row items-center justify-center gap-4">
+          <Image
+            className="object-contain"
+            src="/logoCRUEL.jpg"
+            width={50}
+            height={50}
+            alt="LOGO"
+          />
+          <div className={FontCinzel.className}>
+            <h1 className="text-3xl cursor-default hover:text-green-600 transition duration-100">Cruelty</h1>
+          </div>
+        </div>
+        <div className={FontMontserrat.className}>
+          <ul className="flex justify-between gap-12">
+            <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Inicio</li>
+            <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Drops</li>
+            <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Sobre</li>
+            <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Contato</li>
+          </ul>
+        </div>
       </nav>
-
-      <div className="mt-24 p-2 w-full flex justify-center items-center flex-col">
-        <h1 className="text-4xl"><span className="text-green-700 text-8xl">DROP</span> ATUAL</h1>
-        <div className="flex mt-24 w-3/4 h-auto flex-row justify-between">
-          <div className="h-64 rounded-lg bg-slate-500 w-1/4 hover:scale-105 transition duration-100">Card</div>
-          <div className="h-64 rounded-lg bg-slate-500 w-1/4 hover:scale-105 transition duration-100">Card</div>
-          <div className="h-64 rounded-lg bg-slate-500 w-1/4 hover:scale-105 transition duration-100">Card</div>
+      <div className="h-96 w-full flex items-center justify-center gap-4">
+        <div className={FontCinzel.className}>
+          <h1 className="text-5xl text-green-600">DROP<span className="text-white"> CRUEL</span></h1>
         </div>
       </div>
-      <div className="mt-24 p-2 w-full flex justify-center items-center flex-col">
-        <div className="flex mt-24 w-3/4 h-auto flex-row justify-between">
-          <div className="h-64 rounded-lg bg-slate-500 w-1/4 hover:scale-105 transition duration-100 ">Card</div>
-          <div className="h-64 rounded-lg bg-slate-500 w-1/4 hover:scale-105 transition duration-100 ">Card</div>
-          <div className="h-64 rounded-lg bg-slate-500 w-1/4 hover:scale-105 transition duration-100 ">Card</div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 }
