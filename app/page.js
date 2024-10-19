@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Cinzel, Montserrat } from "next/font/google";
-import { Search, User, ShoppingBag } from 'react-feather';
+import { User, ShoppingBag } from 'react-feather';
 
 
 const FontCinzel = Cinzel({
@@ -12,6 +12,7 @@ const FontMontserrat = Montserrat({
   weight: ['400'],
   subsets: ['latin'],
 })
+
 export default function Home() {
   return (
     <>
@@ -29,7 +30,7 @@ export default function Home() {
           </div>
         </div>
         <div className={FontMontserrat.className}>
-          <div className="flex flex-row gap-10">
+          <div className="flex flex-row items-center gap-10">
             <ul className="flex justify-between gap-10">
               <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Inicio</li>
               <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Drops</li>
@@ -37,23 +38,84 @@ export default function Home() {
               <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Contato</li>
             </ul>
             <div className="flex flex-row gap-4">
-              <div className="p-2 bg-transparent rounded-lg hover:bg-green-600 transition duration-100">
+              <div className="p-2 bg-transparent rounded-lg hover:bg-green-700 transition duration-100">
                 <User size={24} color="white" />
               </div>
-              <div className="p-2 bg-transparent rounded-lg hover:bg-green-600 transition duration-100">
+              <div className="p-2 bg-transparent rounded-lg hover:bg-green-700 transition duration-100">
                 <ShoppingBag size={24} color="white" />
               </div>
             </div>
           </div>
         </div>
-        <div className=" flex flex-row p-3 rounded-full bg-gray-500 gap-2">
-          <Search size={24} color="white" />
-          <input className="bg-transparent border-none w-full" placeholder="Pesquisar"></input>
-        </div>
       </nav>
-      <div className="h-96 w-full flex items-center justify-center gap-4">
+      <div className="h-56 w-full flex items-end justify-center gap-4">
         <div className={FontCinzel.className}>
-          <h1 className="text-5xl text-green-600">DROP<span className="text-white"> CRUEL</span></h1>
+          <h1 className="text-5xl text-green-600">Seja<span className="text-white"> Cruel</span></h1>
+        </div>
+      </div>
+      <div className="mt-24 w-full flex flex-row items-center justify-center gap-12">
+        <Image
+          className="object-contain rounded-lg"
+          src="/img1.png"
+          width={400}
+          height={400}
+          alt="LOGO"
+        />
+        <Image
+          className="object-contain rounded-lg"
+          src="/img2.png"
+          width={400}
+          height={400}
+          alt="LOGO"
+        />
+        <Image
+          className="object-contain rounded-lg"
+          src="/img3.png"
+          width={400}
+          height={400}
+          alt="LOGO"
+        />
+        <Image
+          className="object-contain rounded-lg"
+          src="/img4.png"
+          width={400}
+          height={400}
+          alt="LOGO"
+        />
+      </div>
+
+      <div className="mt-24 w-full flex flex-row items-center justify-evenly mb-5">
+        <div>
+          <Image 
+            className="object-contain rounded-lg"
+            src="/camisa.png"
+            width={400}
+            height={400}
+            alt="LOGO"
+          />
+          <div className="flex flex-row justify-between items-center mt-4">
+            <div className={FontCinzel.className}>
+              <h1 className="text-xl cursor-default hover:text-green-700 transition duration-100">Camiseta Plague War</h1>
+              <h2>R$ 165,00</h2>
+            </div>
+            <div className="bg-transparent p-2 rounded-lg hover:bg-green-700 hover:scale-110 cursor-default transition duration-100"><ShoppingBag size={36} color="white" /></div>
+          </div>
+        </div>
+        <div>
+          <Image 
+            className="object-contain rounded-lg"
+            src="/calca.png"
+            width={400}
+            height={400}
+            alt="LOGO"
+          />
+          <div className="flex flex-row justify-between items-center mt-4">
+            <div className={FontCinzel.className}>
+              <h1 className="text-xl cursor-default hover:text-green-700 transition duration-100">Toxic Denim Double Knee</h1>
+              <h2>R$ 389,00</h2>
+            </div>
+            <div className="bg-transparent p-2 rounded-lg hover:bg-green-700 hover:scale-110 cursor-default transition duration-100"><ShoppingBag size={36} color="white" /></div>
+          </div>
         </div>
       </div>
     </>
