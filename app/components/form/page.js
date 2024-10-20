@@ -1,13 +1,13 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Montserrat } from "next/font/google";
-import { Form } from "./components/form/componetForm/page";
+import { ComponentForm } from "./componetForm/page";
 
 const FontMontserrat = Montserrat({
   weight: ['400'],
   subsets: ['latin'],
 });
 
-export default function Home() {
+export function Form() {
   return (
     <div className={FontMontserrat.className}>
       <div className="w-full h-screen bg-zinc-900 flex items-center justify-center">
@@ -17,10 +17,10 @@ export default function Home() {
             <TabsTrigger className="w-2/4" value="password">Criar</TabsTrigger>
           </TabsList>
           <TabsContent className="text-white flex flex-col gap-6 mt-12" value="account">
-            <Form one_input={"Email"} second_input={"Senha"} Title={"Entre em sua conta"} text_button={"Entrar"}/>
+            <ComponentForm one_input={"Email"} second_input={"Senha"} Title={"Entre em sua conta"} text_button={"Entrar"}/>
           </TabsContent>
           <TabsContent className="text-white flex flex-col gap-6" value="password">
-            <Form one_input={"Nome"} second_input={"Email"} Title={"Crie sua conta"} text_button={"Criar"}/>
+            <ComponentForm one_input={"Nome"} second_input={"Email"} Title={"Crie sua conta"} text_button={"Criar"}/>
           </TabsContent>
         </Tabs>
       </div>

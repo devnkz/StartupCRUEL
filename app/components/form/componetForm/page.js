@@ -1,4 +1,6 @@
-export function Form({Title, one_input, second_input, text_button}) {
+
+
+export function ComponentForm({Title, one_input, second_input, text_button}) {
     return (
         <>
             <div>
