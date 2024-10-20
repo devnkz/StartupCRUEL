@@ -23,7 +23,7 @@ export function Header() {
                     height={50}
                 />
                 <div className={FontCinzel.className}>
-                    <h1 className="text-3xl cursor-default hover:text-green-600 transition duration-100">Cruelty</h1>
+                    <h1 className="text-3xl text-white cursor-default hover:text-green-600 transition duration-100">Cruelty</h1>
                 </div>
             </div>
             <div className={FontMontserrat.className}>
