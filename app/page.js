@@ -3,8 +3,6 @@ import { Header } from "./components/header/page";
 import { Images } from "./components/img/page";
 import { CardProduto } from "./components/cardProdutos/page";
 import { Footer } from "./components/footer/page";
-import  { Form }  from "./components/form/page";
-
 
 const FontCinzel = Cinzel({
   weight: ['400'],
@@ -35,8 +33,6 @@ export default function Home() {
         </section>
       </div>
       <Footer />
-
-      <Form/>
     </div>
   );
 }

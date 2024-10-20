@@ -1,5 +1,4 @@
 
-
 export function ComponentForm({Title, one_input, second_input, text_button}) {
     return (
         <>
