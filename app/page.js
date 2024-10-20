@@ -4,6 +4,7 @@ import { Images } from "./components/img/page";
 import { CardProduto } from "./components/cardProdutos/page";
 import { Footer } from "./components/footer/page";
 
+
 const FontCinzel = Cinzel({
   weight: ['400'],
   subsets: ['latin'],

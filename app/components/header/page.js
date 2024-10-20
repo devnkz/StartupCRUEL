@@ -2,15 +2,8 @@ import { User, ShoppingBag } from 'react-feather';
 import Image from 'next/image';
 import { Cinzel, Montserrat } from "next/font/google";
 import { Form } from '../form/page';
-import {
-    Dialog,
-    DialogContent,
-    DialogDescription,
-    DialogFooter,
-    DialogHeader,
-    DialogTitle,
-    DialogTrigger,
-  } from "@/components/ui/dialog"
+import {Dialog, DialogContent, DialogTrigger,} from "@/components/ui/dialog"
+import {Drawer, DrawerContent, DrawerTrigger,} from "@/components/ui/drawer"
 
 const FontCinzel = Cinzel({
     weight: ['400'],
@@ -58,7 +51,16 @@ export function Header() {
                             </Dialog>
                         </div>
                         <div className="p-2 bg-transparent rounded-lg hover:bg-green-700 transition duration-100 cursor-pointer">
-                            <ShoppingBag size={24} color="white" />
+                            <Drawer>
+                                <DrawerTrigger className="text-white">
+                                    <ShoppingBag size={24} color="white" />
+                                </DrawerTrigger>
+                                <DrawerContent>
+                                    <div className='h-screen bg-zinc-900 w-full'>
+                                        
+                                    </div>
+                                </DrawerContent>
+                            </Drawer>
                         </div>
                     </div>
                 </div>
