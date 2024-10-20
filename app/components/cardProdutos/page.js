@@ -9,7 +9,7 @@ const FontCinzel = Cinzel({
 
 export function CardProduto({src,valor_produto,nome_produto }){
     return(
-        <div>
+        <div className={`hover:scale-110 transition duration-100`}>
           <Image
             className="object-contain rounded-lg"
             src={src}
