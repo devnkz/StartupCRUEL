@@ -5,7 +5,7 @@ import { Form } from '../form/page';
 import { Dialog, DialogContent, DialogTrigger, } from "@/components/ui/dialog"
 import { Drawer, DrawerContent, DrawerTrigger, DrawerClose } from "@/components/ui/drawer"
 import { CardProdutoInCart } from './headerComponents/cardProdutoInCart/page';
-import { TabsList, TabsTrigger, Tabs } from "@/components/ui/tabs"
+import { TabsList, TabsTrigger, Tabs, TabsContent } from "@/components/ui/tabs"
 
 
 const FontCinzel = Cinzel({
@@ -68,48 +68,77 @@ export function Header() {
                                                     <DrawerClose asChild>
                                                         <button className={`text-white bg-zinc-800 p-2 rounded-lg flex flex-row gap-1 ${FontMontserrat.className}
                                                         hover:scale-110 trasition duration-100`} variant="outline">
-                                                            Fechar<X size={24} color="white" /></button>
+                                                            <X size={24} color="white" /></button>
                                                     </DrawerClose>
                                                 </div>
                                                 <div className='flex flex-row items-center'>
-                                                    <div className='w-[60%]'>
+                                                    <div className='w-[70%]'>
                                                         <CardProdutoInCart NomeProduto={"Camiseta Plague War"} valorProduto={"165,00"} src={"/camisa.png"} />
                                                         <CardProdutoInCart NomeProduto={"Toxic Denim Double Knee"} valorProduto={"389,00"} src={"/calca.png"} />
                                                         <CardProdutoInCart NomeProduto={"Shape Faith White"} valorProduto={"299,00"} src={"/shape1.png"} />
                                                         <CardProdutoInCart NomeProduto={"Shape Faith Black"} valorProduto={"299,00"} src={"/shape2.png"} />
                                                     </div>
-                                                    <div className={`bg-zinc-800 w-[50%] rounded-lg ${FontMontserrat.className} p-4 text-white`}>
+                                                    <div className={`bg-zinc-800 rounded-lg ${FontMontserrat.className} p-4 text-white`}>
                                                         <div>
                                                             <h1>Frete</h1>
-                                                            <Tabs defaultValue='account'>
+                                                            <Tabs defaultValue='free'>
                                                                 <TabsList className="bg-zinc-800 text-white justify-between gap-2 w-full">
-                                                                    <TabsTrigger className="w-2/4" value="account">Free</TabsTrigger>
-                                                                    <TabsTrigger className="w-2/4" value="password">Express: R$ 11,99</TabsTrigger>
+                                                                    <TabsTrigger className="w-2/4" value="free">Free</TabsTrigger>
+                                                                    <TabsTrigger className="w-2/4" value="express">Express: R$ 11,99</TabsTrigger>
                                                                 </TabsList>
+                                                                <TabsContent value='free'>
+                                                                    <h1 className='mt-4'>Insira um cupom de desconto</h1>
+                                                                    <div className='w-full p-2 rounded-lg bg-black text-white justify-between flex'>
+                                                                        <input className='bg-black w-full placeholder:bg-black border-none' placeholder='cupom...' />
+                                                                        <button>Aplicar</button>
+                                                                    </div>
+                                                                    <p>Desconto de 15% aplicado</p>
+                                                                    <div className='mt-8'>
+                                                                        <div className='w-full flex flex-row justify-between mt-4'>
+                                                                            <h1>Subtotal</h1>
+                                                                            <h3>R$ 569,89</h3>
+                                                                        </div>
+                                                                        <div className='w-full flex flex-row justify-between mt-4'>
+                                                                            <h1>Disconto</h1>
+                                                                            <h3>(15%) -R$ 84,00</h3>
+                                                                        </div>
+                                                                        <div className='w-full flex flex-row justify-between mt-4'>
+                                                                            <h1 className=' text-xl text-center'>Total</h1>
+                                                                            <h3>R$ 484,00</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </TabsContent>
+                                                                <TabsContent value='express'>
+                                                                    <h1 className='mt-4'>Insira um cupom de desconto</h1>
+                                                                    <div className='w-full p-2 rounded-lg bg-black text-white justify-between flex'>
+                                                                        <input className='bg-black w-full placeholder:bg-black border-none' placeholder='cupom...' />
+                                                                        <button>Aplicar</button>
+                                                                    </div>
+                                                                    <p>Desconto de 15% aplicado</p>
+                                                                    <div className='mt-8'>
+                                                                        <div className='w-full flex flex-row justify-between mt-4'>
+                                                                            <h1>Subtotal</h1>
+                                                                            <h3>(+ 11,99) R$ 581,00</h3>
+                                                                        </div>
+                                                                        <div className='w-full flex flex-row justify-between mt-4'>
+                                                                            <h1>Desconto</h1>
+                                                                            <h3>(15%) -R$ 84,00</h3>
+                                                                        </div>
+                                                                        <div className='w-full flex flex-row justify-between mt-4'>
+                                                                            <h1 className=' text-xl text-center'>Total</h1>
+                                                                            <h3>R$ 484,00</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </TabsContent>
                                                             </Tabs>
-                                                            <h1 className='mt-4'>Insira um cupom de desconto</h1>
-                                                            <div className='w-[50%] p-2 rounded-lg bg-black text-white justify-between flex'>
-                                                                <input className='bg-black w-full placeholder:bg-black border-none' placeholder='cupom...' />
-                                                                <button>Aplicar</button>
-                                                            </div>
-                                                            <p>Desconto de 15% aplicado</p>
-                                                            <div className='w-full flex flex-row justify-between mt-4'>
-                                                                <h1>Subtotal</h1>
-                                                                <h3>R$ 569,89</h3>
-                                                            </div>
-                                                            <div className='w-full flex flex-row justify-between mt-4'>
-                                                                <h1>Disconto</h1>
-                                                                <h3>(15%) -R$ 84,00</h3>
-                                                            </div>
-                                                            <div className='w-full flex flex-row justify-between mt-4'>
-                                                                <h1 className=' text-xl text-center'>Total</h1>
-                                                                <h3>R$ 484,00</h3>
-                                                            </div>
-                                                            <div className='flex flex-col items-center gap-6'>
+                                                            <div className='flex flex-col items-center gap-6 mt-8'>
                                                                 <button className='p-2 bg-white text-black rounded-lg w-2/4
                                                                 hover:bg-black hover:text-white trasition duration-150'>Pagar</button>
-                                                                <button className='p-2 bg-white text-black rounded-lg w-2/4
-                                                                hover:bg-black hover:text-white trasition duration-150'>Continuar comprando</button>
+                                                                <DrawerClose asChild>
+                                                                    <button className={`text-white bg-zinc-800 p-2 rounded-lg flex flex-row gap-1 ${FontMontserrat.className}
+                                                                        hover:scale-110 trasition duration-100`} variant="outline">
+                                                                        Continuar comprando </button>
+                                                                </DrawerClose>
                                                             </div>
                                                         </div>
                                                     </div>

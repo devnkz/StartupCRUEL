@@ -22,7 +22,7 @@ const FontMontserrat = Montserrat({
 
 export function CardProdutoInCart({NomeProduto, valorProduto, src}) {
     return (
-        <div className='mt-12 flex flex-row gap-6 w-[30%]'>
+        <div className='mt-12 flex flex-row gap-6'>
             <Image
                 className='object-contain rounded-lg'
                 src={src}
