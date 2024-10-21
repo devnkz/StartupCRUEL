@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogTrigger, } from "@/components/ui/dialog"
 import { Drawer, DrawerContent, DrawerTrigger, DrawerClose } from "@/components/ui/drawer"
 import { CardProdutoInCart } from './headerComponents/cardProdutoInCart/page';
 import { TabsList, TabsTrigger, Tabs, TabsContent } from "@/components/ui/tabs"
+import { DivDescont } from './headerComponents/cardProdutoInCart/divDescont/page';
 
 
 const FontCinzel = Cinzel({
@@ -87,48 +88,12 @@ export function Header() {
                                                                     <TabsTrigger className="w-2/4" value="express">Express: R$ 11,99</TabsTrigger>
                                                                 </TabsList>
                                                                 <TabsContent value='free'>
-                                                                    <h1 className='mt-4'>Insira um cupom de desconto</h1>
-                                                                    <div className='w-full p-2 rounded-lg bg-black text-white justify-between flex'>
-                                                                        <input className='bg-black w-full placeholder:bg-black border-none' placeholder='cupom...' />
-                                                                        <button>Aplicar</button>
-                                                                    </div>
-                                                                    <p>Desconto de 15% aplicado</p>
-                                                                    <div className='mt-8'>
-                                                                        <div className='w-full flex flex-row justify-between mt-4'>
-                                                                            <h1>Subtotal</h1>
-                                                                            <h3>R$ 569,89</h3>
-                                                                        </div>
-                                                                        <div className='w-full flex flex-row justify-between mt-4'>
-                                                                            <h1>Disconto</h1>
-                                                                            <h3>(15%) -R$ 84,00</h3>
-                                                                        </div>
-                                                                        <div className='w-full flex flex-row justify-between mt-4'>
-                                                                            <h1 className=' text-xl text-center'>Total</h1>
-                                                                            <h3>R$ 484,00</h3>
-                                                                        </div>
-                                                                    </div>
+                                                                    <DivDescont numberDescont={10} valorDesconto={37} valorTotal={387}
+                                                                    valorSubTotal={287}/>
                                                                 </TabsContent>
                                                                 <TabsContent value='express'>
-                                                                    <h1 className='mt-4'>Insira um cupom de desconto</h1>
-                                                                    <div className='w-full p-2 rounded-lg bg-black text-white justify-between flex'>
-                                                                        <input className='bg-black w-full placeholder:bg-black border-none' placeholder='cupom...' />
-                                                                        <button>Aplicar</button>
-                                                                    </div>
-                                                                    <p>Desconto de 15% aplicado</p>
-                                                                    <div className='mt-8'>
-                                                                        <div className='w-full flex flex-row justify-between mt-4'>
-                                                                            <h1>Subtotal</h1>
-                                                                            <h3>(+ 11,99) R$ 581,00</h3>
-                                                                        </div>
-                                                                        <div className='w-full flex flex-row justify-between mt-4'>
-                                                                            <h1>Desconto</h1>
-                                                                            <h3>(15%) -R$ 84,00</h3>
-                                                                        </div>
-                                                                        <div className='w-full flex flex-row justify-between mt-4'>
-                                                                            <h1 className=' text-xl text-center'>Total</h1>
-                                                                            <h3>R$ 484,00</h3>
-                                                                        </div>
-                                                                    </div>
+                                                                    <DivDescont numberDescont={10} valorDesconto={37} valorTotal={387}
+                                                                    valorSubTotal={287}/>
                                                                 </TabsContent>
                                                             </Tabs>
                                                             <div className='flex flex-col items-center gap-6 mt-8'>

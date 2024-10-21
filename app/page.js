@@ -3,6 +3,7 @@ import { Header } from "./components/header/page";
 import { Images } from "./components/img/page";
 import { CardProduto } from "./components/cardProdutos/page";
 import { Footer } from "./components/footer/page";
+import { Sobre } from "./screen/sobre/page";
 
 
 const FontCinzel = Cinzel({
@@ -34,6 +35,7 @@ export default function Home() {
         </section>
       </div>
       <Footer />
+      <Sobre/>
     </div>
   );
 }
