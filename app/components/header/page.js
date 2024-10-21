@@ -1,9 +1,9 @@
-import { User, ShoppingBag } from 'react-feather';
+import { User, ShoppingBag, X } from 'react-feather';
 import Image from 'next/image';
 import { Cinzel, Montserrat } from "next/font/google";
 import { Form } from '../form/page';
-import {Dialog, DialogContent, DialogTrigger,} from "@/components/ui/dialog"
-import {Drawer, DrawerContent, DrawerTrigger,} from "@/components/ui/drawer"
+import { Dialog, DialogContent, DialogTrigger, } from "@/components/ui/dialog"
+import { Drawer, DrawerContent, DrawerTrigger, DrawerClose } from "@/components/ui/drawer"
 
 const FontCinzel = Cinzel({
     weight: ['400'],
@@ -55,9 +55,14 @@ export function Header() {
                                 <DrawerTrigger className="text-white">
                                     <ShoppingBag size={24} color="white" />
                                 </DrawerTrigger>
-                                <DrawerContent>
-                                    <div className='h-screen bg-zinc-900 w-full'>
-                                        
+                                <DrawerContent className="border-none bg-zinc-800">
+                                    <div className='h-[700px] bg-zinc-900 w-full p-4'>
+                                        <DrawerClose asChild>
+                                            <button className={`text-white bg-black p-2 rounded-lg flex flex-row gap-1 ${FontMontserrat.className}
+                                            hover:scale-110 trasition duration-100`} variant="outline">
+                                            Fechar<X size={24} color="white"/></button>
+                                        </DrawerClose>
+                                        <h1 className={`text-green-700 text-6xl ${FontCinzel.className} text-center`}>Cruelty</h1>
                                     </div>
                                 </DrawerContent>
                             </Drawer>
