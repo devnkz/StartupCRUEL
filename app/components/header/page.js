@@ -36,13 +36,17 @@ export function Header({idHome, idDrop , idFooter, LinkNext, LinkNextVoltar}) {
             </div>
             <div className={FontMontserrat.className}>
                 <div className="flex flex-row items-center gap-10">
-                    <ul className="flex justify-between">
-                        <Link href={LinkNextVoltar} className='flex gap-10'>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idHome}>Inicio</a></li>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idDrop}>Drop</a></li>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><Link href={LinkNext}>Sobre</Link></li>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idFooter}>Contato</a></li>
-                        </Link>
+                    <ul className="flex justify-between gap-10">
+                        <button className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">
+                            <Link href={LinkNextVoltar}>Início</Link>
+                        </button>
+                        <button className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">
+                            <Link href={LinkNextVoltar}>Drop</Link>
+                        </button>
+                        <button className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><Link href={LinkNext}>Sobre</Link></button>
+                        <button className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">
+                            <Link href={LinkNextVoltar}>Contato</Link>
+                        </button>
                     </ul>
                     <div className="flex flex-row gap-4">
                         <div className="p-2 bg-transparent rounded-lg hover:bg-green-700 transition duration-100 cursor-pointer">

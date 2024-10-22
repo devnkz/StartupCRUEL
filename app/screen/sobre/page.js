@@ -15,7 +15,7 @@ const FontMontserrat = Montserrat({
 export default function Sobre() {
     return (
         <main className="h-screen w-full bg-zinc-900 flex flex-col">
-            <Header LinkNextVoltar={"/page.js"} idHome={"..."} idDrop={"..."} idFooter={"..."} LinkNext={"/screen/sobre"}/>
+            <Header LinkNextVoltar={"/"} idHome={"..."} idDrop={"..."} idFooter={"..."} LinkNext={"/screen/sobre"}/>
             <section className="flex h-screen items-center justify-center flex-col gap-12">
                 <div className="flex flex-row gap-12">
                     <h1 className={`text-white text-5xl ${FontMontserrat.className}`}>

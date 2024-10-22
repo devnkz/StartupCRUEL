@@ -14,7 +14,7 @@ const FontCinzel = Cinzel({
 export default function Home() {
   return (
     <div id="Home" className="bg-zinc-900">
-      <Header LinkNextVoltar={"/page.js"} idHome={"#Home"} idDrop={"#Drop"} idFooter={"#Footer"} LinkNext={"/screen/sobre"}/>
+      <Header LinkNextVoltar={"/"} idHome={"#Home"} idDrop={"#Drop"} idFooter={"#Footer"} LinkNext={"/screen/sobre"}/>
       <article className="h-56 w-full flex items-end justify-center gap-4">
         <div className={FontCinzel.className}>
           <h1 className="text-5xl text-green-600">Seja<span className="text-white"> Cruel</span></h1>
