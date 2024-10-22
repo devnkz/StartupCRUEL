@@ -19,7 +19,7 @@ const FontMontserrat = Montserrat({
     subsets: ['latin'],
 })
 
-export function Header() {
+export function Header({idHome, idDrop , idFooter}) {
     return (
         <nav className="w-full bg-black flex justify-center flex-row p-4 items-center fixed gap-36 z-10">
             <div className="flex flex-row items-center justify-center gap-4">
@@ -30,16 +30,16 @@ export function Header() {
                     height={50}
                 />
                 <div className={FontCinzel.className}>
-                    <h1 className="text-3xl text-white cursor-default hover:text-green-600 transition duration-100">Cruelty</h1>
+                    <h1 className="text-3xl text-white cursor-default hover:text-green-600 transition duration-100"><a href={idHome}>Cruelty</a></h1>
                 </div>
             </div>
             <div className={FontMontserrat.className}>
                 <div className="flex flex-row items-center gap-10">
                     <ul className="flex justify-between gap-10">
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Inicio</li>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Drop</li>
+                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idHome}>Inicio</a></li>
+                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idDrop}>Drop</a></li>
                         <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Sobre</li>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Contato</li>
+                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idFooter}>Contato</a></li>
                     </ul>
                     <div className="flex flex-row gap-4">
                         <div className="p-2 bg-transparent rounded-lg hover:bg-green-700 transition duration-100 cursor-pointer">
