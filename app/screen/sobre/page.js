@@ -12,11 +12,11 @@ const FontMontserrat = Montserrat({
     subsets: ['latin'],
 })
 
-export function Sobre() {
+export default function Sobre() {
     return (
-        <main className="h-screen w-full bg-zinc-900 flex justify-between flex-col">
-            <Header />
-            <section className="flex items-center justify-center flex-col gap-12">
+        <main className="h-screen w-full bg-zinc-900 flex flex-col">
+            <Header LinkNextVoltar={"/page.js"} idHome={"..."} idDrop={"..."} idFooter={"..."} LinkNext={"/screen/sobre"}/>
+            <section className="flex h-screen items-center justify-center flex-col gap-12">
                 <div className="flex flex-row gap-12">
                     <h1 className={`text-white text-5xl ${FontMontserrat.className}`}>
                         A EMPRESA <span className={`text-green-600  text-6xl ${FontCinzel.className}`}>Cruelty</span></h1>
@@ -38,7 +38,9 @@ export function Sobre() {
                     </p>
                 </article>
             </section>
+            <footer>
             <Footer />
+            </footer>
         </main>
     )
 }

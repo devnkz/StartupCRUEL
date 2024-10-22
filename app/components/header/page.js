@@ -7,6 +7,7 @@ import { Drawer, DrawerContent, DrawerTrigger, DrawerClose } from "@/components/
 import { CardProdutoInCart } from './headerComponents/cardProdutoInCart/page';
 import { TabsList, TabsTrigger, Tabs, TabsContent } from "@/components/ui/tabs"
 import { DivDescont } from './headerComponents/cardProdutoInCart/divDescont/page';
+import Link from 'next/link';
 
 
 const FontCinzel = Cinzel({
@@ -19,7 +20,7 @@ const FontMontserrat = Montserrat({
     subsets: ['latin'],
 })
 
-export function Header({idHome, idDrop , idFooter}) {
+export function Header({idHome, idDrop , idFooter, LinkNext, LinkNextVoltar}) {
     return (
         <nav className="w-full bg-black flex justify-center flex-row p-4 items-center fixed gap-36 z-10">
             <div className="flex flex-row items-center justify-center gap-4">
@@ -35,11 +36,13 @@ export function Header({idHome, idDrop , idFooter}) {
             </div>
             <div className={FontMontserrat.className}>
                 <div className="flex flex-row items-center gap-10">
-                    <ul className="flex justify-between gap-10">
+                    <ul className="flex justify-between">
+                        <Link href={LinkNextVoltar} className='flex gap-10'>
                         <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idHome}>Inicio</a></li>
                         <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idDrop}>Drop</a></li>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">Sobre</li>
+                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><Link href={LinkNext}>Sobre</Link></li>
                         <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><a href={idFooter}>Contato</a></li>
+                        </Link>
                     </ul>
                     <div className="flex flex-row gap-4">
                         <div className="p-2 bg-transparent rounded-lg hover:bg-green-700 transition duration-100 cursor-pointer">
