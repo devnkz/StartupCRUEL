@@ -1,11 +1,13 @@
+"use client"
+
 import {
     Select,
     SelectContent,
     SelectItem,
     SelectTrigger,
     SelectValue,
-} from "@/components/ui/select"
-import {Plus, Minus, Trash2} from 'react-feather';
+} from "@/components/ui/select";
+import { Plus, Minus, Trash2 } from 'react-feather';
 import Image from "next/image";
 import { Cinzel, Montserrat } from "next/font/google";
 
@@ -20,7 +22,7 @@ const FontMontserrat = Montserrat({
     subsets: ['latin'],
 })
 
-export function CardProdutoInCart({NomeProduto, valorProduto, src}) {
+export function CardProdutoInCart({ NomeProduto, valorProduto, src }) {
     return (
         <div className='mt-12 flex flex-row gap-6'>
             <Image
@@ -30,13 +32,13 @@ export function CardProdutoInCart({NomeProduto, valorProduto, src}) {
                 width={150}
             />
             <div className='justify-between flex flex-col'>
-                <h1 className={`text-white text-xl ${FontCinzel.className}`}>{NomeProduto}</h1>
+                <h1 className={`text-white text-xl ${FontCinzel.className} w-72`}>{NomeProduto}</h1>
                 <div className={`text-white ${FontMontserrat.className}`}>
                     <h1>R$ {valorProduto}</h1>
                     <h2 className='text-green-600'>Em estoque</h2>
                 </div>
                 <Select>
-                    <SelectTrigger className="w-full bg-zinc-700 text-white">
+                    <SelectTrigger className="w-44 bg-zinc-700 text-white">
                         <SelectValue placeholder="Escolha o tamanho" />
                     </SelectTrigger>
                     <SelectContent>
@@ -50,7 +52,7 @@ export function CardProdutoInCart({NomeProduto, valorProduto, src}) {
             <div className='flex items-end gap-6'>
                 <div className='flex flex-row justify-between items-end w-24 bg-zinc-800 p-2 rounded-lg'>
                     <Minus size={24} color='white' className='cursor-pointer' />
-                    <h1 className='text-white'>2</h1>
+                    <h1 className='text-white'>0</h1>
                     <Plus size={24} color='white' className='cursor-pointer' />
                 </div>
             </div>

@@ -20,7 +20,7 @@ const FontMontserrat = Montserrat({
     subsets: ['latin'],
 })
 
-export function Header({idHome, idDrop , idFooter, LinkNext, LinkNextVoltar}) {
+export function Header({idHome, LinkNext, LinkNextVoltar}) {
     return (
         <nav className="w-full bg-black flex justify-center flex-row p-4 items-center fixed gap-36 z-10">
             <div className="flex flex-row items-center justify-center gap-4">
