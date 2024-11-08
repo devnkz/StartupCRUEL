@@ -20,7 +20,7 @@ const FontMontserrat = Montserrat({
     subsets: ['latin'],
 })
 
-export function Header({idHome, LinkNext, LinkNextVoltar}) {
+export function Header({ idHome, LinkNext, LinkNextVoltar }) {
     return (
         <nav className="w-full bg-black flex justify-center flex-row p-4 items-center fixed gap-36 z-10">
             <div className="flex flex-row items-center justify-center gap-4">
@@ -43,7 +43,8 @@ export function Header({idHome, LinkNext, LinkNextVoltar}) {
                         <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">
                             <Link href={LinkNextVoltar}>Drop</Link>
                         </li>
-                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100"><Link href={LinkNext}>Sobre</Link></li>
+                        <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">
+                            <Link href={LinkNext}>Sobre</Link></li>
                         <li className="text-white hover:text-green-600 cursor-pointer hover:scale-125 transition duration-100">
                             <Link href={LinkNextVoltar}>Contato</Link>
                         </li>
@@ -52,9 +53,7 @@ export function Header({idHome, LinkNext, LinkNextVoltar}) {
                         <div className="p-2 bg-transparent rounded-lg hover:bg-green-700 transition duration-100 cursor-pointer">
                             <Dialog>
                                 <DialogTrigger asChild>
-                                    <button className="text-white" variant="outline">
                                         <User size={24} color="white" />
-                                    </button>
                                 </DialogTrigger>
                                 <DialogContent className="w-full bg-transparent border-none">
                                     <Form />
@@ -96,11 +95,11 @@ export function Header({idHome, LinkNext, LinkNextVoltar}) {
                                                                 </TabsList>
                                                                 <TabsContent value='free'>
                                                                     <DivDescont numberDescont={10} valorDesconto={37} valorTotal={387}
-                                                                    valorSubTotal={287}/>
+                                                                        valorSubTotal={287} />
                                                                 </TabsContent>
                                                                 <TabsContent value='express'>
                                                                     <DivDescont numberDescont={10} valorDesconto={37} valorTotal={387}
-                                                                    valorSubTotal={287}/>
+                                                                        valorSubTotal={287} />
                                                                 </TabsContent>
                                                             </Tabs>
                                                             <div className='flex flex-col items-center gap-6 mt-8'>
