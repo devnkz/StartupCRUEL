@@ -1,4 +1,5 @@
-export function DivDescont({numberDescont, valorDesconto, valorTotal, valorSubTotal}) {
+
+export function DivDescont({numberDescont, valorTotal, valorSubTotal}) {
     return (
         <>
             <h1 className='mt-4'>Insira um cupom de desconto</h1>
@@ -14,7 +15,7 @@ export function DivDescont({numberDescont, valorDesconto, valorTotal, valorSubTo
                 </div>
                 <div className='w-full flex flex-row justify-between mt-4'>
                     <h1>Desconto</h1>
-                    <h3>{`${numberDescont}`} -R$ {valorDesconto}</h3>
+                    <h3>{`${numberDescont}%`}</h3>
                 </div>
                 <div className='w-full flex flex-row justify-between mt-4'>
                     <h1 className=' text-xl text-center'>Total</h1>
