@@ -7,6 +7,14 @@ import { CardProduto } from "./components/cardProdutos/page";
 import { Footer } from "./components/footer/page";
 import { motion } from "framer-motion";
 
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
 const cardVariants = {
   offscreen: {
     y: 100,
@@ -39,10 +47,41 @@ export default function Home() {
         </div>
       </article>
       <section className="mt-24 w-full flex flex-row items-center justify-center gap-12">
-        <Images src={"/img1.png"} />
-        <Images src={"/img2.png"} />
-        <Images src={"/img3.png"} />
-        <Images src={"/img4.png"} />
+        <Carousel
+          opts={{
+            align: "start",
+          }}
+          className="w-full max-w-6xl"
+        >
+          <CarouselContent>
+            {Array.from({ length: 4 }).map((_, index) => (
+              <>
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Images src={"/img1.png"} />
+                  </div>
+                </CarouselItem>
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Images src={"/img2.png"} />
+                  </div>
+                </CarouselItem>
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Images src={"/img3.png"} />
+                  </div>
+                </CarouselItem>
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <Images src={"/img4.png"} />
+                  </div>
+                </CarouselItem>
+              </>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </section>
       <div className="w-full flex items-center justify-center flex-col mt-24 gap-12">
         <motion.section id="Drop"
